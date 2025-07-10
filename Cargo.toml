@@ -23,17 +23,6 @@ libc = { version = "0.2.99", optional = true }
 once_cell = { version = "1.8", optional = true }
 unicode-width = { version = "0.2", optional = true }
 
-[target.'cfg(windows)'.dependencies]
-encode_unicode = "1"
-
-[target.'cfg(windows)'.dependencies.windows-sys]
-version = "0.60"
-features = [
-    "Win32_Foundation",
-    "Win32_System_Console",
-    "Win32_Storage_FileSystem",
-    "Win32_UI_Input_KeyboardAndMouse",
-]
 
 [dev-dependencies]
 # Pick a setup for proptest that works with wasi
